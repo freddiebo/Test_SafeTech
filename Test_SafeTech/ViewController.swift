@@ -75,19 +75,25 @@ class ViewController: UIViewController {
             return
         }
         
-        let cipherTextData = Data(base64Encoded: cipherText!)
+        guard let cipherTextData = Data(base64Encoded: cipherText!) else{
+            errorLabel.text = "ERROR!"
+            return
+        }
 
-        let clearTextData = SecKeyCreateDecryptedData(self.key!,
+        guard let clearTextData = SecKeyCreateDecryptedData(self.key!,
                                                       algorithm,
-                                                      cipherTextData! as CFData,
-                                                      &error) as Data?
-        
-        guard cipherTextData != nil else {
+                                                      cipherTextData as CFData,
+                                                      &error) as Data? else {
             errorLabel.text = error?.takeRetainedValue().localizedDescription
             return
         }
         
-        let clearText = String(decoding: clearTextData!, as: UTF8.self)
+        guard clearTextData != nil else {
+            errorLabel.text = error?.takeRetainedValue().localizedDescription
+            return
+        }
+        
+        let clearText = String(decoding: clearTextData, as: UTF8.self)
         resultText.text = clearText
     }    
 }
