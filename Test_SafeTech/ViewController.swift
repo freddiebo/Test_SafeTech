@@ -88,11 +88,6 @@ class ViewController: UIViewController {
             return
         }
         
-        guard clearTextData != nil else {
-            errorLabel.text = error?.takeRetainedValue().localizedDescription
-            return
-        }
-        
         let clearText = String(decoding: clearTextData, as: UTF8.self)
         resultText.text = clearText
     }    
