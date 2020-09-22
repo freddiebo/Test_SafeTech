@@ -15,6 +15,7 @@
 		224670072519F8F000A4D495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224670052519F8F000A4D495 /* LaunchScreen.storyboard */; };
 		224670122519F8F000A4D495 /* Test_SafeTechTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224670112519F8F000A4D495 /* Test_SafeTechTests.swift */; };
 		2246701D2519F8F100A4D495 /* Test_SafeTechUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2246701C2519F8F100A4D495 /* Test_SafeTechUITests.swift */; };
+		22467031251A018400A4D495 /* KeyChainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22467030251A018400A4D495 /* KeyChainService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		224670182519F8F100A4D495 /* Test_SafeTechUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Test_SafeTechUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2246701C2519F8F100A4D495 /* Test_SafeTechUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_SafeTechUITests.swift; sourceTree = "<group>"; };
 		2246701E2519F8F100A4D495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22467030251A018400A4D495 /* KeyChainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				22466FFA2519F8EA00A4D495 /* AppDelegate.swift */,
 				22466FFC2519F8EA00A4D495 /* SceneDelegate.swift */,
 				22466FFE2519F8EA00A4D495 /* ViewController.swift */,
+				22467030251A018400A4D495 /* KeyChainService.swift */,
 				224670002519F8EA00A4D495 /* Main.storyboard */,
 				224670032519F8F000A4D495 /* Assets.xcassets */,
 				224670052519F8F000A4D495 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22466FFF2519F8EA00A4D495 /* ViewController.swift in Sources */,
+				22467031251A018400A4D495 /* KeyChainService.swift in Sources */,
 				22466FFB2519F8EA00A4D495 /* AppDelegate.swift in Sources */,
 				22466FFD2519F8EA00A4D495 /* SceneDelegate.swift in Sources */,
 			);
