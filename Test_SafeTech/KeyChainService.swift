@@ -14,13 +14,23 @@ class KeyChainService {
     static let name = "sampleKey"
     
     static func createKey() throws -> SecKey {
+        
+        let access =
+            SecAccessControlCreateWithFlags(kCFAllocatorDefault,
+                                            kSecAttrAccessibleWhenUnlockedThisDeviceOnly,
+                                            .privateKeyUsage,
+                                            nil)!
+        
         let tag = name.data(using: .utf8)!
+        
         let attributes: [String: Any] = [
             kSecAttrKeyType as String           : kSecAttrKeyTypeEC,
             kSecAttrKeySizeInBits as String     : 256,
+            kSecAttrTokenID as String           : kSecAttrTokenIDSecureEnclave,
             kSecPrivateKeyAttrs as String : [
                 kSecAttrIsPermanent as String       : true,
-                kSecAttrApplicationTag as String    : tag
+                kSecAttrApplicationTag as String    : tag,
+                kSecAttrAccessControl as String:    access
             ]
         ]
         

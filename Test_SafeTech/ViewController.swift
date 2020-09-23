@@ -35,7 +35,7 @@ class ViewController: UIViewController {
             errorLabel.text = "Error publicKey"
             return
         }
-        let algorithm: SecKeyAlgorithm = .eciesEncryptionCofactorX963SHA256AESGCM
+        let algorithm: SecKeyAlgorithm = .eciesEncryptionCofactorVariableIVX963SHA256AESGCM
         guard SecKeyIsAlgorithmSupported(publicKey, .encrypt, algorithm) else {
             errorLabel.text = "Error SecKeyIsAlgorithmSupported"
             return
